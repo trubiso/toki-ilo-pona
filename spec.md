@@ -1,9 +1,9 @@
-# toki ilo pona spec v0.0.5
+# toki ilo pona spec v0.0.6
 
 toki ilo is a programming language made to be somewhat compatible with toki
 pona's syntax while still being useful
 
-## Types
+## kule (types)
 
 | Type | Keyword | Literal | Comments |
 |---|---|---|---|
@@ -11,34 +11,39 @@ pona's syntax while still being useful
 | **boolean** | `lili` | <p align="center">`lon` (`true`)<br>**or**<br>`ala` (`false`)</p> | <p align="center">The choice of the keyword `lili` was made<br> because a boolean is a small piece of data.<p> |
 | **number** | `nanpa` | `0`, `1`, `2`, `1.1`, `-1`, etc. | <p align="center">***weka***</p> |
 
-### lipu insa (interpolated strings)
+
+## toki (print)
+
+```
+o toki te toki a! to
+```
+
+### toki tawa lipu pakala (printing to `stderr`)
+
+```
+o toki te a ike! to tawa lipu pakala
+```
+
+## lipu namako (comments)
+
+```
+; this is a comment
+
+toki te hello to ; they also work inline.
+```
+
+
+## lipu insa (interpolated strings)
 
 toki ilo pona supports string interpolation.
 
 This is achieved using the `insa` keyword.
 
 ```
-insa te toki! ijo li [ijo] to ; where ijo is a variable
-```
+; define a variable, more on this below.
+lipu Teto li te hola! aaaaa kokosila ;-; to
 
-## Printing
-
-```
-toki te toki a! to
-```
-
-### Printing to `stderr`
-
-```
-toki te a ike! to kepeken lipu pakala
-```
-
-## Comments
-
-```
-; this is a comment
-
-toki te hello to ; they also work inline.
+insa te toki! mi toki e ni: [lipu Teto] to ; where ijo is a variable
 ```
 
 ## Variables
