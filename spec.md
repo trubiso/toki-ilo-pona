@@ -1,4 +1,4 @@
-# toki ilo pona spec v0.0.7
+# toki ilo pona spec v0.0.8
 
 toki ilo is a programming language made to be somewhat compatible with toki
 pona's syntax while still being useful
@@ -108,7 +108,7 @@ kulupu kon NiLiWawa li 1,
 ; this creates a tuple of 3 numbers
 kulupu nanpa pi taso 3 Mija li 1, li 2, li 3
 
-; this will throw a PakalaPiKoNasa
+; this will throw a PakalaPiKonNasa
 ; kulupu kon pi taso 2 NiLiPakala li 1, li 2
 ```
 
