@@ -1,4 +1,4 @@
-# toki ilo pona spec v0.0.9
+# toki ilo pona spec v0.0.10
 
 toki ilo is a programming language made to be somewhat compatible with toki
 pona's syntax while still being useful
@@ -48,7 +48,7 @@ insa te toki! mi toki e ni: [lipu Teto] to ; ensure you use headnouns for your v
 
 ## Variables
 
-Variable names must comply with toki pona phonetics.
+Variable names must comply with toki pona phonetics and phonotactics.
 
 The compiler will throw a `pakala kokosila` if this is not the case.
 
@@ -102,54 +102,101 @@ kulupu kon NiLiWawa li 1,
                     li insa te ni li nanpa: [Ja] to
 ```
 
-#### kulupu taso (tuples)
+#### kulupu lili (tuples)
 
 ```
 ; this creates a tuple of 3 numbers
-kulupu nanpa pi taso 3 Mija li 1, li 2, li 3
-
-; this will throw a PakalaPiKonNasa
-; kulupu kon pi taso 2 NiLiPakala li 1, li 2
+kulupu nanpa pi ijo 3 taso Mija li 1, li 2, li 3
 ```
 
 # WIP after this point
 
 
 ## labels and goto
-; while statements
+To make a label, the `ma [label name]:` syntax is used.
+
+To jump to it (goto), the `o tawa ma [label name]` construction is used.
+
+```
+o toki te kijetesantakalu li toki e to
+o tawa ma Konsu
+
+o toki te mu to ; this code will not be executed
+
+ma Konsu:
+o toki te toki a! to
+```
+
+## if/else statements
+For if/else statements, the la particle from toki pona is used.
+
+```
+lipu Sawento li te soweli to
+
+lipu Sawento li te waso to la
+  ; insa
+
+  ; else if (otherwise, ...)
+ante la, lipu Sawento li te pipi la
+  ; insa
+
+  ; else (otherwise)
+ante la
+  ; insa
+pini ; it is important to finish the if statement with the pini keyword
+```
+
+## while/for loops
+While and for loops do not exist explicitly in toki ilo pona. This is
+because we already have what we need: goto and if/else statements.
+
+```
+; while loops
 
 ; uses labels
-nimi Mu: Pulijan li lon la
-  ; jmp
-  o tawa Mu
-pini
-
-; if statements
+nimi Mu:
 Pulijan li lon la
   ; insa
-
-  ; else statements
-ante la, Pulijan2 li ala la
-  ; insa
+  o tawa Mu
 pini
+; when we exit the while loop, we'll be here
+```
 
-; funcs
-pali Tuntutu li kepeken e nanpa Mimi, e nanpa Waki, e lipu Pili
+```
+; for loops
+
+; we have to figure out +- <> still
+; come back later for good for loops
+
+; have a consolation kijetesantakalu
+; and a consolation palisa jelo
+```
+
+## funcs
+Functions are defined with the `pali [name] li kepeken e [type] [name] e [type] [name]... (li pana e [type])` syntax. The `e [type] [name]` part defines the arguments of the function. The last part defines the return type, and is optional (it will be inferred from the return statements otherwise). Indentation for readability may be added.
+
+To return, the `o pana e [type] [value]` syntax is used.
+
+To throw errors, the pakala type is used with the type of pakala afterwards (example: `pakala PakalaKokosila`).
+
+```
+pali Tuntutu li kepeken e nanpa Mimi, 
+                        e nanpa Waki, 
+                        e lipu Pili
+             li pana e lipu
   ; return
   o pana e lipu te mi tawa to
 
   ; throw
   o pana e pakala PakalaKokosila
 pini
+```
 
-; call func
-o pali Tuntutu kepeken Ja, kepeken 5, kepeken te toki a! to
+To call the function, the `o pali [name] kepeken [value] kepeken [value]...` syntax is used.
 
-; print
-o toki te toki to
-
-; print to stderr
-o toki te toki to tawa lipu pakala
+```
+o pali Tuntutu kepeken nanpa Ja, kepeken 5, kepeken te toki a! to
+```
 
 ## nasin pi lawa wawa (strict mode)
 
