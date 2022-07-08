@@ -1,4 +1,4 @@
-# toki ilo pona spec v0.0.8
+# toki ilo pona spec v0.0.9
 
 toki ilo is a programming language made to be somewhat compatible with toki
 pona's syntax while still being useful
@@ -150,3 +150,24 @@ o toki te toki to
 
 ; print to stderr
 o toki te toki to tawa lipu pakala
+
+## nasin pi lawa wawa (strict mode)
+
+Enable strict mode to enforce strings to use valid toki pona
+and enforce `te` and `to` quotation marks.
+
+Enabling strict mode can be done by adding this to the top of
+the file using it.
+
+```
+o kepeken nasin pi lawa wawa
+```
+
+### Proposed toggle
+
+Similarly, strict mode may be disabled anywhere in the file
+by doing the following:
+
+```
+o kepeken ala nasin pi lawa wawa
+```
