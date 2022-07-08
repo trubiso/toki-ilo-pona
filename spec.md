@@ -99,7 +99,7 @@ kulupu lipu SonaKala li te kala li moku to, li te kala li pona to
 kulupu kon NiLiWawa li 1,
                     li 2,
                     li te owe to,
-                    li insa te ni li nanpa: [Ja] to
+                    li insa te ni li nanpa: [nanpa Ja] to
 ```
 
 #### kulupu lili (tuples)
