@@ -29,7 +29,7 @@ o toki te a ike! to tawa lipu pakala
 ```
 ; this is a comment
 
-o toki te hello to ; they also work inline.
+o toki te polinpin li epiku! to ; they also work inline.
 ```
 
 
