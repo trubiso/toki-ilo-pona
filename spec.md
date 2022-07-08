@@ -1,4 +1,4 @@
-# toki ilo pona spec v0.0.10
+# toki ilo pona spec v0.0.11
 
 toki ilo is a programming language made to be somewhat compatible with toki
 pona's syntax while still being useful
@@ -182,8 +182,8 @@ To throw errors, the pakala type is used with the type of pakala afterwards (exa
 ```
 pali Tuntutu li kepeken e nanpa Mimi, 
                         e nanpa Waki, 
-                        e lipu Pili
-             li pana e lipu
+                        e lipu  Pili,
+             li pana e lipu:
   ; return
   o pana e lipu te mi tawa to
 
