@@ -29,7 +29,7 @@ o toki te a ike! to tawa lipu pakala
 ```
 ; this is a comment
 
-toki te hello to ; they also work inline.
+o toki te hello to ; they also work inline.
 ```
 
 
@@ -143,7 +143,7 @@ pali Tuntutu li kepeken e nanpa Mimi, e nanpa Waki, e lipu Pili
 pini
 
 ; call func
-o pali Tuntutu kepeken Ja, kepeken 5, kepeken te toki to
+o pali Tuntutu kepeken Ja, kepeken 5, kepeken te toki a! to
 
 ; print
 o toki te toki to
