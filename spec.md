@@ -1,4 +1,4 @@
-# toki ilo pona spec v0.0.6
+# toki ilo pona spec v0.0.7
 
 toki ilo is a programming language made to be somewhat compatible with toki
 pona's syntax while still being useful
@@ -43,7 +43,7 @@ This is achieved using the `insa` keyword.
 ; define a variable, more on this below.
 lipu Teto li te hola! aaaaa kokosila ;-; to
 
-insa te toki! mi toki e ni: [lipu Teto] to ; where ijo is a variable
+insa te toki! mi toki e ni: [lipu Teto] to ; ensure you use headnouns for your variables
 ```
 
 ## Variables
@@ -108,7 +108,7 @@ kulupu kon NiLiWawa li 1,
 ; this creates a tuple of 3 numbers
 kulupu nanpa pi taso 3 Mija li 1, li 2, li 3
 
-; this will throw an error
+; this will throw a PakalaPiKoNasa
 ; kulupu kon pi taso 2 NiLiPakala li 1, li 2
 ```
 
@@ -139,7 +139,7 @@ pali Tuntutu li kepeken e nanpa Mimi, e nanpa Waki, e lipu Pili
   o pana e lipu te mi tawa to
 
   ; throw
-  o pana e pakala kokosila
+  o pana e pakala PakalaKokosila
 pini
 
 ; call func
